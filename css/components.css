@@ -1,0 +1,132 @@
+/* Piezas reutilizables en varias secciones */
+
+/* Logo con nombre y lema */
+.lockup { display: inline-flex; align-items: center; gap: 12px; }
+.lockup__mark { height: 40px; width: auto; }
+.lockup__rule { width: 2px; height: 40px; border-radius: 2px; background: var(--brand); }
+.lockup__text { display: flex; flex-direction: column; line-height: 1; }
+.lockup__name { font-size: 1rem; font-weight: 800; letter-spacing: var(--tracking-tight); color: var(--brand-dark); }
+.lockup__tag { margin-top: 6px; font-size: .5625rem; font-weight: 700; letter-spacing: var(--tracking-wide); color: var(--brand); }
+.lockup--light .lockup__name { color: #fff; }
+.lockup--light .lockup__tag { color: var(--lime); }
+.lockup--light .lockup__rule { background: var(--lime); }
+@media (min-width: 768px) { .lockup__name { font-size: 1.125rem; } }
+@media (max-width: 380px) { .lockup__tag { display: none; } }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 44px; padding: 0 20px;
+  border: 1px solid transparent; border-radius: var(--radius-lg);
+  font-size: .9375rem; font-weight: 700; line-height: 1; white-space: nowrap;
+  transition: background-color var(--dur-base), color var(--dur-base), border-color var(--dur-base), box-shadow var(--dur-base), transform var(--dur-base), filter var(--dur-base);
+}
+.btn--lg { min-height: 54px; padding: 0 28px; font-size: 1rem; }
+
+/* Superficie activa de EPE-Web adaptada a los controles de la landing. */
+.btn--primary,
+.btn--lime {
+  background-color: var(--brand);
+  background-image: var(--brand-gradient), var(--brand-gradient-border);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  color: var(--brand-deep);
+  box-shadow: var(--brand-active-shadow);
+}
+.btn--primary:hover,
+.btn--lime:hover {
+  color: var(--brand-deep);
+  box-shadow: var(--brand-hover-shadow);
+  filter: brightness(1.03);
+  transform: translateY(-2px);
+}
+.btn:active { transform: translateY(1px) scale(.98); box-shadow: var(--brand-pressed-shadow); }
+.btn:focus-visible { outline: 3px solid var(--brand-dark); outline-offset: 4px; }
+.cta .btn:focus-visible { outline-color: #fff; }
+.btn .icon { transition: transform 200ms var(--ease-out); }
+.btn:hover .icon { transform: scale(1.1); }
+.btn:active .icon { transform: scale(.95); }
+
+
+.link-arrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .9375rem; font-weight: 700; color: var(--brand-dark);
+  transition: color var(--dur-base);
+}
+.link-arrow:hover { color: var(--brand); }
+
+/* Rótulo de sección: número, línea fina y nombre */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: .8125rem; font-weight: 600; letter-spacing: .02em; color: var(--ink-soft);
+}
+.eyebrow b { font-weight: 700; color: var(--brand); font-variant-numeric: tabular-nums; }
+.eyebrow b::after {
+  content: ""; display: inline-block; vertical-align: middle;
+  width: 28px; height: 1px; margin-left: 12px; background: currentColor; opacity: .5;
+}
+.eyebrow--light { color: rgb(255 255 255 / .75); }
+
+.section-title { margin-top: 18px; font-size: var(--fs-h2); font-weight: 400; line-height: 1.05; letter-spacing: -.035em; }
+.section-title em { font-style: normal; font-weight: 700; color: var(--brand-dark); }
+.section-title--light { color: #fff; }
+.section-title--light em { color: var(--lime); }
+
+.lead { max-width: 36rem; margin-top: 18px; font-size: var(--fs-lead); line-height: 1.7; color: var(--ink-body); }
+
+.section-head { max-width: 44rem; margin-bottom: clamp(2.5rem, 2rem + 2vw, 3.5rem); }
+.section-head--center { margin-inline: auto; text-align: center; }
+.section-head--split { display: grid; gap: 8px; align-items: end; max-width: none; }
+@media (min-width: 1024px) {
+  .section-head--split { grid-template-columns: 1.1fr .9fr; gap: 64px; }
+  .section-head--split .lead { margin-top: 0; }
+}
+
+.icon-badge {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 52px; height: 52px; border-radius: var(--radius-full);
+  background: var(--brand-surface); color: var(--brand);
+}
+.icon-badge .icon { width: 24px; height: 24px; stroke-width: 1.75; }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 5px 12px; border-radius: var(--radius-full);
+  background: var(--brand-surface); color: var(--brand-dark);
+  font-size: .75rem; font-weight: 700; line-height: 1.4;
+}
+.chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
+
+/* Botón circular con un "+" que gira a "-" al abrir */
+.toggle-icon {
+  position: relative; flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+  background: var(--brand-surface);
+  transition: background-color var(--dur-base), transform var(--dur-base) var(--ease-out);
+}
+.toggle-icon::before,
+.toggle-icon::after {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; border-radius: 2px;
+  background: var(--brand-dark); transform: translate(-50%, -50%);
+}
+.toggle-icon::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform var(--dur-base); }
+[open] > summary .toggle-icon { background: var(--lime); transform: rotate(180deg); }
+[open] > summary .toggle-icon::after { transform: translate(-50%, -50%); }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: var(--fs-small); font-weight: 700; color: var(--ink); }
+.field input,
+.field textarea {
+  width: 100%; min-height: 50px; padding: 12px 16px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--ink) 6%); border-radius: var(--radius-xl);
+  background: var(--surface-page); color: var(--ink); font-size: .9375rem;
+  transition: border-color var(--dur-base), box-shadow var(--dur-base), background-color var(--dur-base);
+}
+.field textarea { min-height: 120px; resize: vertical; line-height: 1.6; }
+.field input::placeholder,
+.field textarea::placeholder { color: color-mix(in srgb, var(--ink-muted) 80%, transparent); }
+.field input:focus,
+.field textarea:focus {
+  outline: none; border-color: var(--brand); background: #fff;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 18%, transparent);
+}
+.field input:user-invalid,
+.field textarea:user-invalid { border-color: #D14343; }

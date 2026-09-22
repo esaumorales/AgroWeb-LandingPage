@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="fondo" cx=".3" cy=".2" r=".9"><stop offset="0" stop-color="#FBF3F1"/><stop offset="1" stop-color="#EEDFE0"/></radialGradient>
+    <radialGradient id="baya" cx=".35" cy=".3" r=".75"><stop offset="0" stop-color="#D76A86"/><stop offset=".55" stop-color="#A33A5C"/><stop offset="1" stop-color="#6A2140"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#fondo)"/>
+  <ellipse cx="200" cy="350" rx="80" ry="10" fill="#1B4322" opacity=".12"/>
+  <path d="M200 96c0-24 6-40 18-52" stroke="#5B3A1E" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M206 70c-30-34-86-34-110-6 30 26 82 32 110 6z" fill="#5D9634"/>
+  <path d="M204 70c-34-6-66-6-100-2" stroke="#1B4322" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".5"/>
+  <g fill="url(#baya)">
+    <circle cx="150" cy="130" r="30"/><circle cx="208" cy="122" r="31"/><circle cx="264" cy="134" r="29"/>
+    <circle cx="124" cy="182" r="29"/><circle cx="180" cy="176" r="31"/><circle cx="238" cy="178" r="31"/><circle cx="292" cy="186" r="27"/>
+    <circle cx="150" cy="232" r="30"/><circle cx="208" cy="228" r="31"/><circle cx="264" cy="234" r="29"/>
+    <circle cx="178" cy="280" r="29"/><circle cx="234" cy="280" r="28"/>
+    <circle cx="206" cy="324" r="26"/>
+  </g>
+  <g fill="#fff" opacity=".35">
+    <circle cx="140" cy="120" r="6"/><circle cx="198" cy="112" r="6"/><circle cx="170" cy="166" r="6"/><circle cx="228" cy="168" r="6"/><circle cx="198" cy="218" r="6"/><circle cx="168" cy="270" r="5"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="fondo" cx=".7" cy=".2" r=".9"><stop offset="0" stop-color="#F4FAEF"/><stop offset="1" stop-color="#DCEBD9"/></radialGradient>
+    <linearGradient id="piel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4E7A2E"/><stop offset="1" stop-color="#1F3A1C"/></linearGradient>
+    <radialGradient id="pulpa" cx=".5" cy=".62" r=".6"><stop offset="0" stop-color="#F2F0A8"/><stop offset=".7" stop-color="#D9E68A"/><stop offset="1" stop-color="#A9C95A"/></radialGradient>
+    <radialGradient id="pepa" cx=".38" cy=".35" r=".7"><stop offset="0" stop-color="#B07A45"/><stop offset="1" stop-color="#6E4323"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#fondo)"/>
+  <ellipse cx="200" cy="330" rx="140" ry="14" fill="#1B4322" opacity=".12"/>
+  <g transform="rotate(14 130 210)">
+    <path d="M130 70c26 0 40 30 46 62 8 40 44 70 44 120 0 50-40 82-90 82s-90-32-90-82c0-50 36-80 44-120 6-32 20-62 46-62z" fill="url(#piel)"/>
+    <path d="M100 110c6-20 14-30 26-34" stroke="#fff" stroke-opacity=".25" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </g>
+  <g transform="rotate(-12 275 220)">
+    <path d="M275 78c26 0 40 30 46 62 8 40 44 70 44 120 0 50-40 82-90 82s-90-32-90-82c0-50 36-80 44-120 6-32 20-62 46-62z" fill="#2F5424"/>
+    <path d="M275 90c22 0 34 26 39 54 7 36 39 62 39 108 0 44-34 72-78 72s-78-28-78-72c0-46 32-72 39-108 5-28 17-54 39-54z" fill="url(#pulpa)"/>
+    <circle cx="275" cy="252" r="42" fill="url(#pepa)"/>
+    <circle cx="262" cy="238" r="10" fill="#fff" opacity=".25"/>
+  </g>
+</svg>
